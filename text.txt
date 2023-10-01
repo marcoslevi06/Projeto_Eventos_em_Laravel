@@ -1,0 +1,5 @@
+Link da Playlist do Projeto: 
+https://www.youtube.com/playlist?list=PLnDvRpP8BnewYKI1n2chQrrR4EYiJKbUG
+
+Link do Repositório do Git Hub:
+https://github.com/matheusbattisti/curso_laravel
