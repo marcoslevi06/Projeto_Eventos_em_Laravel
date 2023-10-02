@@ -3,3 +3,8 @@ https://www.youtube.com/playlist?list=PLnDvRpP8BnewYKI1n2chQrrR4EYiJKbUG
 
 Link do Repositório do Git Hub:
 https://github.com/matheusbattisti/curso_laravel
+
+- Comandos relativos ao lampp:
+    cd /opt/lampp
+    sudo service mysql status
+    sudo service apache2 status
