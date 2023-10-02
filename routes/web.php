@@ -18,20 +18,17 @@ Route::get('/', function () {
 });
 
 Route::get('/contact', function () {
-    return view('produtos');
+    return view('contact');
 });
 
 Route::get('/produtos', function () {
 
-    $arr = [
-        'nome' => 'Levi',
-        'idade' => 23,
-        'cidade' => 'Novo Oriente',
-        'profissao' => 'Desenvolvedor',
-    ];
+    // Query parâmetro.
+    $busca = request('search');
 
-    $arr_numerico = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    return view('products', ['busca' => $busca]);
+});
 
-
-    return view('produtos', ['arr' => $arr], ['arr_numerico' => $arr_numerico]);
+Route::get('/produtos_teste/{id?}', function ($id = null) {
+    return view('product', ['id' => $id]);
 });
