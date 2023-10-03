@@ -8,3 +8,6 @@ https://github.com/matheusbattisti/curso_laravel
     cd /opt/lampp
     sudo service mysql status
     sudo service apache2 status
+
+- php artisan migrate:frash
+- php artisan migrate:status
