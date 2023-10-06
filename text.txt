@@ -11,3 +11,10 @@ https://github.com/matheusbattisti/curso_laravel
 
 - php artisan migrate:frash
 - php artisan migrate:status
+
+- Para adicionar um novo campo a uma tabela, deve-se criar uma nova migration.
+- Não rodar o fresh, ele apaga todos os dados existentes.
+- Reset volta todas as migrações para o estado anterior.
+- Para voltar todas e rodar o migrate novamente, utiliza-se o refresh;
+
+php artisan make:migration add_category_to_products_table
