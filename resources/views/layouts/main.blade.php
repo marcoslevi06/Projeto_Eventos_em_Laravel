@@ -22,7 +22,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">\
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="collapse navbar-collapse" id="navbar">
                 <a href="/" class="navbar-brand">
                     <img src="/img/hdcevents_logo.svg" alt="logo HDC Events">
@@ -47,7 +47,15 @@
 
 
     {{-- bloco que vai substituir o contúdo das páginas --}}
-    @yield('content') 
+    <main>
+        <div class="container-fluid"></div>
+        <div class="row">
+            @if(session('msg'))
+            <p class="msg" >{{ session('msg') }} </p>
+            @endif
+            @yield('content')
+        </div>
+    </main>
     <footer>
         <p>HDC events &copy; 2023</p>
     </footer>
