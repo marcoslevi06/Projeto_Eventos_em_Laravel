@@ -18,3 +18,10 @@ https://github.com/matheusbattisti/curso_laravel
 - Para voltar todas e rodar o migrate novamente, utiliza-se o refresh;
 
 php artisan make:migration add_category_to_products_table
+
+
+sudo service mysql status
+sudo systemctl status apache2
+
+sudo service apache2 stop
+sudo systemctl stop mysql
