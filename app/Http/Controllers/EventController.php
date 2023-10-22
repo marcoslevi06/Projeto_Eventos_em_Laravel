@@ -11,9 +11,18 @@ class EventController extends Controller
     // Rota raíz da aplicação
     public function index()
     {
-        $events = Event::all();
+        $search = request('search');
 
-        return view('welcome', ['events' => $events]);
+        // Se houver algum evento, ele vai devolver. Se não, a negativa.
+        if ($search) {
+            $events = Event::where([
+                ['title', 'like', '%' . $search . '%']
+            ])->get();
+        } else {
+            $events = Event::all();
+        }
+
+        return view('welcome', ['events' => $events], ['search' => $search]);
     }
 
     // Rota para criação de um Evento
