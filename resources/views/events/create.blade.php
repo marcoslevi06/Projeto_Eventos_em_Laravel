@@ -5,37 +5,52 @@
 @section('content')
 
 <div id="event-create-container" class="col-md-6 offset-md-3">
-    <h1>Crie o seu evento: </h1>
-    <form action="/events" method="POST" enctype="multipart/form-data">
-        @csrf
-        <div>
-            <label style="font-weight: bold" for="image">Imagem do Evento</label>
-            <input type="file" id="image" name="image" class="form-control-file">
-        </div>
-
-
-        <div class="form-group">
-            <label style="font-weight: bold" for="title">Evento:</label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Nome do seu evento">
-        </div>
-        <div class="form-group">
-            <label style="font-weight: bold" for="title">Cidade:</label>
-            <input type="text" class="form-control" id="city" name="city" placeholder="Cidade onde será realizado">
-        </div>
-        <div class="form-group">
-            <label style="font-weight: bold" for="title">O evento é privado?</label>
-            <select type="text" class="form-control" id="private" name="private" placeholder="Nome do seu evento">
-                <option value="0">Não</option>
-                <option value="1">Sim</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label style="font-weight: bold" for="title">Descrição:</label>
-            <textarea class="form-control" id="description" name="description" placeholder="Descreva como se dará o evento"></textarea>
-        </div>
-        <input type="submit" class="btn btm-primary" value="Criar Evento" style="background-color:#8AEEA3">
-        <a style="background-color:#BAEEEC; color:black;" class="btn btm-primary" href="/">Voltar para home</a>
-    </form>
+  <h1>Crie o seu evento</h1>
+  <form action="/events" method="POST" enctype="multipart/form-data">
+    @csrf
+    <div class="form-group">
+      <label for="image">Imagem do Evento:</label>
+      <input type="file" id="image" name="image" class="from-control-file">
+    </div>
+    <div class="form-group">
+      <label for="title">Evento:</label>
+      <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento">
+    </div>
+    <div class="form-group">
+      <label for="title">Cidade:</label>
+      <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento">
+    </div>
+    <div class="form-group">
+      <label for="title">O evento é privado?</label>
+      <select name="private" id="private" class="form-control">
+        <option value="0">Não</option>
+        <option value="1">Sim</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="title">Descrição:</label>
+      <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="title">Adicione itens de infraestrutura:</label>
+      <div class="form-group">	
+        <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
+      </div>
+      <div class="form-group">	
+        <input type="checkbox" name="items[]" value="Palco"> Palco
+      </div>
+      <div class="form-group">	
+        <input type="checkbox" name="items[]" value="Cerveja grátis"> Cerveja grátis
+      </div>
+      <div class="form-group">	
+        <input type="checkbox" name="items[]" value="Open Food"> Open food
+      </div>
+      <div class="form-group">	
+        <input type="checkbox" name="items[]" value="Brindes"> Brindes
+      </div>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Criar Evento">
+  </form>
 </div>
 
 @endsection
