@@ -34,12 +34,25 @@
                     <li class="nav-item">
                         <a href="/events/create" class="nav-link">Criar Evento</a>
                     </li>
+                    @auth
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Entrar</a>
+                        <a href="/dashboard" class="nav-link">Meus Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Cadastar</a>
+                        <form id="logout-form" action="/logout" method="post">
+                            @csrf
+                            <button type="submit" style="background-color: crimson; color:aliceblue; font-weight: bold">Sair</button>
+                        </form>
                     </li>
+                    @endauth
+                    @guest
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link" style="background-color: aquamarine">Entrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/register" class="nav-link" style="background-color: springgreen">Cadastar</a>
+                    </li>
+                    @endguest
                 </u>
             </div>
         </nav>

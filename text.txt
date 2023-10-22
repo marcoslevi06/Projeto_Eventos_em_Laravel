@@ -28,3 +28,5 @@ sudo systemctl stop mysql
 
 
 sudo /opt/lampp/lampp start
+
+nvm run dev
