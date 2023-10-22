@@ -3,9 +3,16 @@
 @section('content')
 
 <div id="search-container" class="col-md-12">
+    @if($search)
+        <h1>Buscando por: <strong style="background-color:blue">{{ $search }}</strong></h1>
+    @else
+        <h1>Próximos Eventos</h1>
+    @endif
+
     <h1>Busque um evento: </h1>
-    <form action="">
-        <input type="text" id="seach" name="search" class="form-control" placeholder="Procurar">
+    <form action="/" method="GET">
+        <input type="text" id="search" name="search" class="form-control" placeholder="Procurar">
+        <button type="submit" class="btn btn-primary" style="margin: 10px">Buscar</button>
     </form>
 </div>
 <div id="events-container" class="col-md-12">
