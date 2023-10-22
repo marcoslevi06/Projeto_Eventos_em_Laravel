@@ -25,3 +25,6 @@ sudo systemctl status apache2
 
 sudo service apache2 stop
 sudo systemctl stop mysql
+
+
+sudo /opt/lampp/lampp start
